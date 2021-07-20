@@ -220,7 +220,7 @@
     // 获取每页的页码数
     var pageSize = '10'
     var useLeancloud = ''
-    var useComment = ('false' === 'true')
+    var useComment = ('true' === 'true')
     $.getJSON('/content.json', function (json) {
       $('#search-breadcrumb').append(`搜索'${s}'的结果`)
       var result = getArticles(s, 'posts', json).concat(getArticles(s, 'pages', json))
@@ -489,12 +489,6 @@
             
             <li class="list-group-item">
                 <span class="post-title">
-                    <a href="/2021/07/18/hello-world/">Hello World</a>
-                </span>
-            </li>
-            
-            <li class="list-group-item">
-                <span class="post-title">
                     <a href="/2021/07/19/2021-07-19/">人生中第一篇博客兼对小站的第一次测试</a>
                 </span>
             </li>
@@ -502,6 +496,12 @@
             <li class="list-group-item">
                 <span class="post-title">
                     <a href="/2021/07/20/2021-07-20/">对人偶学院和对近期崩坏三节奏的感触</a>
+                </span>
+            </li>
+            
+            <li class="list-group-item">
+                <span class="post-title">
+                    <a href="/2021/07/18/hello-world/">Hello World</a>
                 </span>
             </li>
             
@@ -534,11 +534,11 @@
                 
                 <div class="cloud-tags tab-pane nav bs-sidenav fade" id="sidebar-tags">
     
-    <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 16.781720084416563px;" class="tag-cloud-link">测试</a>
+    <a href="/tags/%E6%B5%8B%E8%AF%95/" style="font-size: 8.46961781334537px;" class="tag-cloud-link">测试</a>
     
-    <a href="/tags/%E5%B4%A9%E5%9D%8F%E4%B8%89/" style="font-size: 19.219603222651777px;" class="tag-cloud-link">崩坏三</a>
+    <a href="/tags/%E5%B4%A9%E5%9D%8F%E4%B8%89/" style="font-size: 13.379678057653773px;" class="tag-cloud-link">崩坏三</a>
     
-    <a href="/tags/%E4%BA%BA%E5%81%B6%E5%AD%A6%E9%99%A2/" style="font-size: 10.55348069853832px;" class="tag-cloud-link">人偶学院</a>
+    <a href="/tags/%E4%BA%BA%E5%81%B6%E5%AD%A6%E9%99%A2/" style="font-size: 12.828215299656911px;" class="tag-cloud-link">人偶学院</a>
     
 </div>
                 
@@ -649,6 +649,30 @@
 <script src="/js/blog.js"></script>
 
 
+
+
+<script src="https://myau.moe/js/comment/gitment.browser.js"></script>
+<script>
+    if(window.commentConfig) {
+      window.commentConfig.id = 'Mon Jul 19 2021 20:25:50 GMT+0800'
+      window.commentConfig.owner = 'StarryQuartet'
+      window.commentConfig.repo = 'https://github.com/StarryQuartet/starryquartet.github.io.repo'
+      window.commentConfig.client_id = '63599b37183e4ef6c202'
+      window.commentConfig.client_secret = '24517e09fdd9e54039f9ee2c3ae43c8d3b91af6e'
+      window.commentConfig.redirect_uri = ''
+    } else {
+      window.commentConfig = {
+      	id: 'Mon Jul 19 2021 20:25:50 GMT+0800',
+        owner: 'StarryQuartet',
+        repo: 'https://github.com/StarryQuartet/starryquartet.github.io.repo',
+        client_id: '63599b37183e4ef6c202',
+        client_secret: '24517e09fdd9e54039f9ee2c3ae43c8d3b91af6e',
+        redirect_uri: ''
+      }
+    }
+</script>
+
+<script src="/js/comment/gitment.js"></script>
 
 
 </html>
